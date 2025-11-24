@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curățare Duș - SOP Pas cu Pas - B&M Professional Cleaning</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: #f9fafb;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #5EEAD4 0%, #14B8A6 100%);
+            padding: 2.5rem 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .company-name {
+            margin-bottom: 1rem;
+        }
+        
+        .company-name h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #374151;
+            letter-spacing: -0.5px;
+            margin-bottom: 0.25rem;
+        }
+        
+        .company-name p {
+            font-size: 1rem;
+            color: #0f766e;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        
+        .header-title {
+            color: white;
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-top: 1rem;
+        }
+        
+        .header-subtitle {
+            color: #f0fdfa;
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+        }
+        
+        /* Content */
+        .content {
+            padding: 2.5rem 2rem;
+        }
+        
+        .intro {
+            background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%);
+            border-left: 5px solid #14B8A6;
+            padding: 1.75rem;
+            margin-bottom: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .intro h2 {
+            color: #0f766e;
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+        }
+        
+        .intro p {
+            color: #115e59;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+        
+        /* Equipment Section */
+        .equipment-section {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border-left: 5px solid #f59e0b;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2.5rem;
+        }
+        
+        .equipment-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .equipment-emoji {
+            font-size: 2.5rem;
+        }
+        
+        .equipment-header h3 {
+            font-size: 1.5rem;
+            color: #92400e;
+            font-weight: 700;
+        }
+        
+        .equipment-list {
+            display: grid;
+            gap: 0.75rem;
+        }
+        
+        .equipment-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .bullet {
+            color: #f59e0b;
+            font-weight: 900;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+        
+        .equipment-item span {
+            color: #78350f;
+            font-size: 1.05rem;
+            font-weight: 500;
+        }
+        
+        /* Step Cards */
+        .step-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border: 2px solid #e5e7eb;
+            border-left: 6px solid #14B8A6;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .step-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+        }
+        
+        .step-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #f3f4f6;
+        }
+        
+        .step-emoji {
+            font-size: 2.5rem;
+        }
+        
+        .step-header h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1f2937;
+        }
+        
+        /* Lists */
+        ol {
+            list-style: none;
+            counter-reset: step-counter;
+            padding-left: 0;
+            margin-bottom: 1.5rem;
+        }
+        
+        ol li {
+            counter-increment: step-counter;
+            padding: 0.75rem 0 0.75rem 3rem;
+            position: relative;
+            color: #374151;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 0.5rem;
+        }
+        
+        ol li:before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0.65rem;
+            background: #14B8A6;
+            color: white;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+        
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 0.5rem;
+        }
+        
+        ul li {
+            padding: 0.5rem 0 0.5rem 2.5rem;
+            position: relative;
+            color: #4b5563;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+        
+        ul li:before {
+            content: "•";
+            position: absolute;
+            left: 1rem;
+            color: #14B8A6;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+        
+        /* Warning Boxes */
+        .warning-box {
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            border: 3px solid #ef4444;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .warning-title {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            color: #991b1b;
+            font-weight: 800;
+            font-size: 1.1rem;
+        }
+        
+        .warning-icon {
+            font-size: 1.5rem;
+        }
+        
+        .warning-box ul {
+            margin-top: 0;
+        }
+        
+        .warning-box ul li {
+            color: #7f1d1d;
+            font-weight: 600;
+            padding: 0.5rem 0 0.5rem 2rem;
+        }
+        
+        .warning-box ul li:before {
+            color: #dc2626;
+        }
+        
+        /* Pro Tip Box */
+        .pro-tip {
+            background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+            border-left: 5px solid #3b82f6;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .pro-tip-title {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            color: #1e40af;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        
+        .pro-tip ul li {
+            color: #1e3a8a;
+            font-weight: 500;
+        }
+        
+        .pro-tip ul li:before {
+            color: #3b82f6;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #f3f4f6;
+            padding: 2rem;
+            text-align: center;
+            border-top: 3px solid #14B8A6;
+        }
+        
+        .footer p {
+            color: #6b7280;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        
+        .footer strong {
+            color: #0f766e;
+        }
+        
+        /* Print styles */
+        @media print {
+            body {
+                background: white;
+            }
+            
+            .step-card {
+                page-break-inside: avoid;
+                box-shadow: none;
+                border: 2px solid #e5e7eb;
+            }
+        }
+        
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .header {
+                padding: 2rem 1.5rem;
+            }
+            
+            .company-name h1 {
+                font-size: 2rem;
+            }
+            
+            .header-title {
+                font-size: 1.4rem;
+            }
+            
+            .content {
+                padding: 2rem 1.5rem;
+            }
+            
+            .step-card {
+                padding: 1.5rem;
+            }
+            
+            .step-header h3 {
+                font-size: 1.3rem;
+            }
+            
+            ol li {
+                padding-left: 2.5rem;
+            }
+            
+            ol li:before {
+                width: 1.75rem;
+                height: 1.75rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="company-name">
+                <h1>B&M</h1>
+                <p>PROFESSIONAL CLEANING</p>
+            </div>
+            <h2 class="header-title">CURĂȚARE DUȘ - SOP PAS CU PAS</h2>
+            <p class="header-subtitle">Ghid de Instruire - Curățare Duș</p>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <div class="intro">
+                <h2>Curățare Duș - SOP Pas cu Pas</h2>
+                <p>Urmează acest proces exact pentru dușuri impecabile, fără urme</p>
+            </div>
+
+            <!-- Equipment Section -->
+            <div class="equipment-section">
+                <div class="equipment-header">
+                    <span class="equipment-emoji">🧼</span>
+                    <h3>PRODUSE ȘI ECHIPAMENTE NECESARE</h3>
+                </div>
+                <div class="equipment-list">
+                    <div class="equipment-item">
+                        <span class="bullet">•</span>
+                        <span>Găleată roșie cu apă curată</span>
+                    </div>
+                    <div class="equipment-item">
+                        <span class="bullet">•</span>
+                        <span>2 lavete roz mari</span>
+                    </div>
+                    <div class="equipment-item">
+                        <span class="bullet">•</span>
+                        <span>Burete roșu</span>
+                    </div>
+                    <div class="equipment-item">
+                        <span class="bullet">•</span>
+                        <span>Prosop roz (uscat)</span>
+                    </div>
+                    <div class="equipment-item">
+                        <span class="bullet">•</span>
+                        <span>Produs anticalcar (sticlă albă)</span>
+                    </div>
+                    <div class="equipment-item">
+                        <span class="bullet">•</span>
+                        <span>Produs pentru baie (sticlă roșie)</span>
+                    </div>
+                    <div class="equipment-item">
+                        <span class="bullet">•</span>
+                        <span>Clor</span>
+                    </div>
+                    <div class="equipment-item">
+                        <span class="bullet">•</span>
+                        <span>Hârtie igienică (pentru îndepărtarea părului)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 1 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <span class="step-emoji">🔄</span>
+                    <h3>PASUL 1: PREGĂTIRE</h3>
+                </div>
+                <ol>
+                    <li>Aspiră bine zona dușului înainte de a începe curățarea</li>
+                </ol>
+                <div class="warning-box">
+                    <div class="warning-title">
+                        <span class="warning-icon">⚠️</span>
+                        NON NEGOCIABIL:
+                    </div>
+                    <ul>
+                        <li>Nici un păr, praf sau gunoi pe podea, in interiorul si exteriorul dusului</li>
+                        <li>Colțurile și marginile trebuie aspirate bine</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <span class="step-emoji">🚿</span>
+                    <h3>PASUL 2: CURĂȚĂ INTERIORUL DUȘULUI</h3>
+                </div>
+                <ol>
+                    <li>Clătește și stoarce buretele roșu</li>
+                    <li>Pulverizează de 3-4 ori solutie de calcar pe burete</li>
+                    <li>Intră în cabina de duș</li>
+                    <li>Folosește buretele pentru a înmuia interiorul ușilor de sticlă și ramele cu solutie de calcar (lasă să acționeze)</li>
+                    <li>Clătește bine buretele</li>
+                    <li>Pulverizează produs pentru baie pe burete</li>
+                    <li>Șterge cu buretele toata faianta din interiorul dușului</li>
+                </ol>
+                <div class="warning-box">
+                    <div class="warning-title">
+                        <span class="warning-icon">⚠️</span>
+                        NON NEGOCIABIL:
+                    </div>
+                    <ul>
+                        <li>Toate suprafețele de sticlă trebuie complet acoperite cu solutie de calcar</li>
+                        <li>Toata faianta trebuie curățată - fără zone ratate</li>
+                        <li>Rosturile dintre plăci trebuie sa fie curatate</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <span class="step-emoji">🧽</span>
+                    <h3>PASUL 3: STERGE STICLA ȘI PEREȚII</h3>
+                </div>
+                <ol>
+                    <li>Clătește și stoarce foarte bine ambele lavete roz mari</li>
+                    <li>Folosește Laveta 1 pentru a clati interiorul ușilor de sticlă</li>
+                    <li>Apoi folosește aceeași laveta pentru a șterge toți pereții placați cu faianta</li>
+                    <li>Folosește Laveta 2 pentru a șterge ușile de sticlă din nou (interior și rame)</li>
+                    <li>Ieși din duș</li>
+                    <li>Clateste laveta 2 si sterge exteriorul ușilor de sticlă si ramele</li>
+                </ol>
+                <div class="pro-tip">
+                    <div class="pro-tip-title">
+                        👉 Sfat Profesional:
+                    </div>
+                    <p style="color: #1e3a8a; margin-bottom: 1rem; font-weight: 500;">Înfășoară cârpa în jurul degetelor și:</p>
+                    <ul>
+                        <li>Șterge mai întâi toate cele 4 margini ale sticlei cu atenție</li>
+                        <li>Apoi șterge mijlocul sticlei într-o singură direcție ( de la stânga la dreapta sau de sus in jos )</li>
+                    </ul>
+                </div>
+                <div class="warning-box">
+                    <div class="warning-title">
+                        <span class="warning-icon">⚠️</span>
+                        NON NEGOCIABIL:
+                    </div>
+                    <ul>
+                        <li>Sticla trebuie să fie complet fără dungi sau urme</li>
+                        <li>Nici o urmă pe rame</li>
+                        <li>Șterge într-o singură direcție pentru a evita dungile</li>
+                        <li>Verifică marginile - adesea sunt omise</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <span class="step-emoji">🧻</span>
+                    <h3>PASUL 4: ÎNDEPĂRTEAZĂ PĂRUL</h3>
+                </div>
+                <ol>
+                    <li>În timp ce sticla se usucă, folosește hârtie igienică pentru a colecta:
+                        <ul>
+                            <li>Tot părul de pe placa dușului</li>
+                            <li>Orice păr din scurgere sau din jurul ei</li>
+                        </ul>
+                    </li>
+                    <li>Aruncă părul și hârtia igienică în coș</li>
+                </ol>
+                <div class="warning-box">
+                    <div class="warning-title">
+                        <span class="warning-icon">⚠️</span>
+                        NON NEGOCIABIL:
+                    </div>
+                    <ul>
+                        <li>Zero fire de păr vizibile oriunde în duș</li>
+                        <li>Verifică cu atenție scurgerea - părul se adună adesea acolo</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <span class="step-emoji">✨</span>
+                    <h3>PASUL 5: FINISAJE</h3>
+                </div>
+                <ol>
+                    <li>Verifică sticla pentru:
+                        <ul>
+                            <li>Pete</li>
+                            <li>Urme de apă</li>
+                            <li>Amprente</li>
+                        </ul>
+                    </li>
+                    <li>Dacă este necesar, lustruiește cu un prosop roz uscat</li>
+                    <li>Curăță placa de jos a dușului:
+                        <ul>
+                            <li>Folosește buretele roșu pulverizat de 3-4 ori cu produs pentru baie</li>
+                            <li>Freacă bine placa</li>
+                        </ul>
+                    </li>
+                    <li>Clătește placa cu o laveta curată, clătită</li>
+                    <li>Toarna clor în scurgere</li>
+                    <li>Folosește prosopul roz pentru a lustrui:
+                        <ul>
+                            <li>Placa dușului</li>
+                            <li>Ramele exterioare ale dușului - asigură-te că este impecabil și fără dungi</li>
+                        </ul>
+                    </li>
+                    <li>Curăță oglinda cu produs pentru geamuri</li>
+                </ol>
+                <div class="warning-box">
+                    <div class="warning-title">
+                        <span class="warning-icon">⚠️</span>
+                        NON NEGOCIABIL:
+                    </div>
+                    <ul>
+                        <li>Ușile de sticlă (interior și exterior) trebuie să fie complet fără urme și impecabile</li>
+                        <li>Ramele pe toate laturile sa fie curate și strălucitoare</li>
+                        <li>Oglinda sa fie impecabilă, fără urme</li>
+                        <li>Placa dușului sa fie curată, fără reziduri de săpun sau pete</li>
+                        <li>Scurgerea sa fie curată și să aibă clor aplicat</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Step 6 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <span class="step-emoji">🧹</span>
+                    <h3>PASUL 6: SPALĂ PODEAUA</h3>
+                </div>
+                <ol>
+                    <li>Spală podeaua din jurul dușului</li>
+                    <li>Acordă atenție colțurilor și marginilor</li>
+                    <li>Lasă podeaua să se usuce complet</li>
+                </ol>
+                <div class="warning-box">
+                    <div class="warning-title">
+                        <span class="warning-icon">⚠️</span>
+                        NON NEGOCIABIL:
+                    </div>
+                    <ul>
+                        <li>Niciun păr, murdărie sau pete pe podea</li>
+                        <li>Podeaua trebuie spălată uniform - fără zone uscate</li>
+                        <li>Colțurile și marginile sa fie curate</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>Întrebări? Întreabă-o pe <strong>Maria</strong> sau pe <strong>supervizorul tău</strong>.</p>
+        </div>
+    </div>
+</body>
+</html>

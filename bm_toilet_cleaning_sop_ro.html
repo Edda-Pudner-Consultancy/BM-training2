@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curățare Toalete - SOP Pas cu Pas - B&M Professional Cleaning</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: #f9fafb;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #5EEAD4 0%, #14B8A6 100%);
+            padding: 2.5rem 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .company-name {
+            margin-bottom: 1rem;
+        }
+        
+        .company-name h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #374151;
+            letter-spacing: -0.5px;
+            margin-bottom: 0.25rem;
+        }
+        
+        .company-name p {
+            font-size: 1rem;
+            color: #0f766e;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        
+        .header-title {
+            color: white;
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-top: 1rem;
+        }
+        
+        .header-subtitle {
+            color: #f0fdfa;
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+        }
+        
+        /* Content */
+        .content {
+            padding: 2.5rem 2rem;
+        }
+        
+        .intro {
+            background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%);
+            border-left: 5px solid #14B8A6;
+            padding: 1.75rem;
+            margin-bottom: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .intro h2 {
+            color: #0f766e;
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+        }
+        
+        .intro p {
+            color: #115e59;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+        
+        /* Equipment Section */
+        .equipment-section {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border-left: 5px solid #f59e0b;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2.5rem;
+        }
+        
+        .equipment-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .equipment-emoji {
+            font-size: 2.5rem;
+        }
+        
+        .equipment-header h3 {
+            font-size: 1.5rem;
+            color: #92400e;
+            font-weight: 700;
+        }
+        
+        .equipment-list {
+            display: grid;
+            gap: 0.75rem;
+        }
+        
+        .equipment-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .bullet {
+            color: #f59e0b;
+            font-weight: 900;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+        
+        .equipment-item span {
+            color: #78350f;
+            font-size: 1.05rem;
+            font-weight: 500;
+        }
+        
+        /* Step Cards */
+        .step-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border: 2px solid #e5e7eb;
+            border-left: 6px solid #14B8A6;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .step-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+        }
+        
+        .step-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #f3f4f6;
+        }
+        
+        .step-emoji {
+            font-size: 2.5rem;
+        }
+        
+        .step-header h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1f2937;
+        }
+        
+        /* Lists */
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 0.5rem;
+        }
+        
+        ul li {
+            padding: 0.5rem 0 0.5rem 2.5rem;
+            position: relative;
+            color: #374151;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+        
+        ul li:before {
+            content: "•";
+            position: absolute;
+            left: 1rem;
+            color: #14B8A6;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+        
+        /* Warning Boxes */
+        .warning-box {
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            border: 3px solid #ef4444;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .warning-title {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            color: #991b1b;
+            font-weight: 800;
+            font-size: 1.1rem;
+        }
+        
+        .warning-icon {
+            font-size: 1.5rem;
+        }
+        
+        .warning-box ul {
+            margin-top: 0;
+        }
+        
+        .warning-box ul li {
+            color: #7f1d1d;
+            font-weight: 600;
+            padding: 0.5rem 0 0.5rem 2rem;
+        }
+        
+        .warning-box ul li:before {
+            color: #dc2626;
+            left: 0.5rem;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #f3f4f6;
+            padding: 2rem;
+            text-align: center;
+            border-top: 3px solid #14B8A6;
+        }
+        
+        .footer p {
+            color: #6b7280;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        
+        .footer strong {
+            color: #0f766e;
+        }
+        
+        /* Print styles */
+        @media print {
+            body {
+                background: white;
+            }
+            
+            .step-card {
+                page-break-inside: avoid;
+                box-shadow: none;
+                border: 2px solid #e5e7eb;
+            }
+        }
+        
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .header {
+                padding: 2rem 1.5rem;
+            }
+            
+            .company-name h1 {
+                font-size: 2rem;
+            }
+            
+            .header-title {
+                font-size: 1.4rem;
+            }
+            
+            .content {
+                padding: 2rem 1.5rem;
+            }
+            
+            .step-card {
+                padding: 1.5rem;
+            }
+            
+            .step-header h3 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="company-name">
+                <h1>B&M</h1>
+                <p>PROFESSIONAL CLEANING</p>
+            </div>
+            <h2 class="header-title">CURĂȚARE TOALETE - SOP PAS CU PAS</h2>
+            <p class="header-subtitle">Ghid de Instruire - Curățare Toalete</p>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <div class="intro">
+                <h2>Curățare Toalete - SOP Pas cu Pas</h2>
+                <p>Urmează acest proces exact pentru fiecare baie</p>
+            </div>
+
+            <!-- Equipment Section -->
+            <div class="equipment-section">
+                <div class="equipment-header">
+                    <span class="equipment-emoji">🧼</span>
+                    <h3>PRODUSE ȘI ECHIPAMENTE NECESARE</h3>
+                </div>
+                <div class="equipment-list">
+                    <div class="equipment-item">
+                        <span class="bullet">•</span>
+                        <span>Burete roșu</span>
+                    </div>
+                    <div class="equipment-item">
+                        <span class="bullet">•</span>
+                        <span>Laveta roz</span>
+                    </div>
+                    <div class="equipment-item">
+                        <span class="bullet">•</span>
+                        <span>Mănușă pentru toaletă cu cârpă roz mică</span>
+                    </div>
+                    <div class="equipment-item">
+                        <span class="bullet">•</span>
+                        <span>Burete abraziv</span>
+                    </div>
+                    <div class="equipment-item">
+                        <span class="bullet">•</span>
+                        <span>Prosoape roz (uscate)</span>
+                    </div>
+                    <div class="equipment-item">
+                        <span class="bullet">•</span>
+                        <span>Produs anticalcar (sticlă albă)</span>
+                    </div>
+                    <div class="equipment-item">
+                        <span class="bullet">•</span>
+                        <span>Produs pentru baie (sticlă roșie)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 1 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <span class="step-emoji">🔄</span>
+                    <h3>PASUL 1: PREGĂTIRE</h3>
+                </div>
+                <p style="color: #374151; font-size: 1.05rem; margin-bottom: 1rem;">Aspiră bine întreaga zonă a toaletei:</p>
+                <ul>
+                    <li>În spatele ușii</li>
+                    <li>În spatele toaletei si dedesubt</li>
+                    <li>Sub coșul de gunoi</li>
+                    <li>Sub suportul pentru peria de toaletă</li>
+                </ul>
+                <div class="warning-box">
+                    <div class="warning-title">
+                        <span class="warning-icon">⚠️</span>
+                        NON NEGOCIABIL:
+                    </div>
+                    <ul>
+                        <li>Nici un praf, murdărie sau păr vizibil pe podea înainte de a începe curățarea</li>
+                        <li>Toate colțurile trebuie aspirate, mai ales în spatele toaletei</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <span class="step-emoji">🧽</span>
+                    <h3>PASUL 2: APLICĂ PRODUSELE</h3>
+                </div>
+                <ul>
+                    <li>Udă buretele roșu și stoarce-l bine</li>
+                    <li>Pulverizează de 3-4 ori produs anticalcar pe burete</li>
+                    <li>Folosește buretele pentru a înmuia toate robinetele (lasă produsul să acționeze pe robinete)</li>
+                    <li>Pulverizează de 2-3 ori produs pentru baie pe fiecare chiuvetă</li>
+                    <li>Pulverizează de 2-3 ori de produs pentru baie pe fiecare toaletă</li>
+                    <li>Repetă în toate cabinele (lasă produsele să acționeze în timp ce te deplasezi prin fiecare cabină)</li>
+                </ul>
+                <div class="warning-box">
+                    <div class="warning-title">
+                        <span class="warning-icon">⚠️</span>
+                        NON NEGOCIABIL:
+                    </div>
+                    <ul>
+                        <li>Toate robinetele trebuie complet acoperite cu produs anticalcar</li>
+                        <li>Nu sări peste nicio chiuvetă sau toaletă - fiecare primește produs aplicat</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <span class="step-emoji">🚿</span>
+                    <h3>PASUL 3: CURĂȚĂ CHIUVETELE ȘI ZONELE DIN JUR</h3>
+                </div>
+                <ul>
+                    <li>Revino la prima cabină</li>
+                    <li>Clătește și stoarce buretele roșu</li>
+                    <li>Pulverizează 3-4 apăsări de produs pentru baie pe burete</li>
+                    <li>Curăță bine chiuveta cu buretele</li>
+                    <li>Clătește și stoarce foarte bine o laveta roz</li>
+                    <li>Folosește laveta roz pentru a șterge (în această ordine exactă):
+                        <ul>
+                            <li>Robinetul</li>
+                            <li>Chiuveta (interior și exterior)</li>
+                            <li>Dispenserul de săpun</li>
+                            <li>Peretele lângă chiuvetă</li>
+                            <li>Țevile de lângă chiuvetă</li>
+                            <li>Dispenserul de hârtie igienică</li>
+                            <li>Capacul rezervorului de toaletă</li>
+                            <li>Capacul coșului de gunoi</li>
+                            <li>Uscătorul de mâini</li>
+                            <li>Placa de sub uscătorul de mâini</li>
+                            <li>Peretele din jurul plăcii</li>
+                            <li>Mânerul ușii și placa metalică de jos</li>
+                            <li>Orice urme sau pete de pe uși (interior și exterior) și pereți</li>
+                        </ul>
+                    </li>
+                    <li>Repetă întregul proces în fiecare cabină</li>
+                </ul>
+                <div class="warning-box">
+                    <div class="warning-title">
+                        <span class="warning-icon">⚠️</span>
+                        NON NEGOCIABIL:
+                    </div>
+                    <ul>
+                        <li>Nici o urmă pe robinete</li>
+                        <li>Nicio amprentă pe uși, mânere sau plăci metalice</li>
+                        <li>Fara praf pe capacul rezervorului, uscătorul de mâini, distribuitorul de săpun sau de hartie</li>
+                        <li>Laveta roz trebuie clătită și stoarsă bine - dacă e prea udă, va lăsa urme</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <span class="step-emoji">✨</span>
+                    <h3>PASUL 4: FINISAJE LA CHIUVETE</h3>
+                </div>
+                <ul>
+                    <li>Revino la prima cabină</li>
+                    <li>Dacă este necesar, folosește un prosop roz uscat pentru a lustrui:
+                        <ul>
+                            <li>Robinetele</li>
+                            <li>Chiuveta</li>
+                            <li>Placa metalica de deasupra rezervorului de toaletă</li>
+                        </ul>
+                    </li>
+                    <li>Curăță oglinda cu produs pentru geamuri</li>
+                    <li>Verifică și completeaza sau înlocuiește:
+                        <ul>
+                            <li>Hârtia igienică</li>
+                            <li>Rezervele de săpun</li>
+                            <li>Spray-ul de camera</li>
+                        </ul>
+                    </li>
+                    <li>Repetă în toate cabinele</li>
+                </ul>
+                <div class="warning-box">
+                    <div class="warning-title">
+                        <span class="warning-icon">⚠️</span>
+                        NON NEGOCIABIL:
+                    </div>
+                    <ul>
+                        <li>Oglinzile trebuie să fie fără urme, impecabile</li>
+                        <li>Robinetele și chiuvetele trebuie să strălucească - fără pete de apă</li>
+                        <li>Toate consumabilele trebuie completate înainte de a trece la toalete</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <span class="step-emoji">🚽</span>
+                    <h3>PASUL 5: CURĂȚĂ TOALETELE</h3>
+                </div>
+                <ul>
+                    <li>Pune mănușa pentru toaletă</li>
+                    <li>Ia laveta roz mică:
+                        <ul>
+                            <li>Înmoaie-o în apa toaletei</li>
+                            <li>Clătește-o și stoarce-o bine</li>
+                            <li>Pulverizeaz-o de 2-3 ori cu produs pentru baie</li>
+                        </ul>
+                    </li>
+                    <li>Curăță în această ordine exactă:
+                        <ul>
+                            <li>Partea superioara a capacului toaletei</li>
+                            <li>Partea inferioara a capacului</li>
+                            <li>Partea superioara a colacului de toaletă</li>
+                            <li>Partea inferioara a colacului de toaletă</li>
+                            <li>Interiorul vasului de toaletă (inclusiv sub margine si partea cu apa)</li>
+                            <li>Întregul exterior al toaletei (balamale, spate, bază, țevi, suport pentru perie)</li>
+                        </ul>
+                    </li>
+                    <li>Clătește și stoarce laveta foarte bine</li>
+                    <li>Revino și clătește toate suprafețele în ordine inversă:
+                        <ul>
+                            <li>Începe cu baza exterioară și lucrează în sus</li>
+                            <li>Termină cu capacul</li>
+                            <li>Clătește cârpa de câte ori este nevoie</li>
+                        </ul>
+                    </li>
+                    <li>Termină cu capacul închis</li>
+                    <li>Repetă pentru fiecare toaletă</li>
+                </ul>
+                <div class="warning-box">
+                    <div class="warning-title">
+                        <span class="warning-icon">⚠️</span>
+                        NON NEGOCIABIL:
+                    </div>
+                    <ul>
+                        <li>Nici o urmă vizibilă, pată sau reziduu de produs oriunde pe toaletă</li>
+                        <li>Sub margine sa fie complet curat - verifică ridicând capacul</li>
+                        <li>Balamalele trebuie sa fie curate și fără acumulare de murdărie</li>
+                        <li>Baza toaletei (unde se întâlnește cu podeaua) si teava din spate sa fie curate</li>
+                        <li>Lasă întotdeauna capacul închis când ai terminat</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Step 6 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <span class="step-emoji">🚹</span>
+                    <h3>PASUL 6: CURĂȚĂ PIȘOARELE (Doar Băile Bărbaților)</h3>
+                </div>
+                <ul>
+                    <li>Spală bine cârpa într-una din toalete</li>
+                    <li>Curăță fiecare pisoar:
+                        <ul>
+                            <li>Interiorul pisoarului</li>
+                            <li>Exteriorul pisoarului</li>
+                            <li>Pereții din jur</li>
+                            <li>Țevile din spatele și lângă pisoar</li>
+                        </ul>
+                    </li>
+                    <li>Verifică ca fiecare pisoar are cel puțin 3 blocuri dezinfectante</li>
+                    <li>Înlocuiește blocurile dacă este necesar</li>
+                </ul>
+                <div class="warning-box">
+                    <div class="warning-title">
+                        <span class="warning-icon">⚠️</span>
+                        NON NEGOCIABIL:
+                    </div>
+                    <ul>
+                        <li>Nicio urmă sau stropire pe pereții din jurul pisoarelor</li>
+                        <li>Fiecare pisoar trebuie să aibă minimum 3 blocuri proaspete</li>
+                        <li>Nici un miros - dacă există, curăță mai temeinic si toarna clor in scurgeri</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Step 7 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <span class="step-emoji">🧹</span>
+                    <h3>PASUL 7: SPALĂ PODEAUA</h3>
+                </div>
+                <ul>
+                    <li>După ce toate toaletele, chiuvetele și pisoarele sunt curate, spală podeaua</li>
+                    <li>Începe din spatele băii și lucrează spre ușă</li>
+                    <li>Acordă atenție specială colțurilor și zonei din spatele toaletelor</li>
+                    <li>Lasă podeaua să se usuce înainte de a pleca</li>
+                </ul>
+                <div class="warning-box">
+                    <div class="warning-title">
+                        <span class="warning-icon">⚠️</span>
+                        NON NEGOCIABIL:
+                    </div>
+                    <ul>
+                        <li>Nici un păr, praf sau resturi pe podea</li>
+                        <li>Podelele trebuie spălate uniform - fără zone uscate sau băltoace</li>
+                        <li>Colțurile și marginile sa fie curate</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>Întrebări? Întreabă-o pe <strong>Maria</strong> sau pe <strong>supervizorul tău</strong>.</p>
+        </div>
+    </div>
+</body>
+</html>

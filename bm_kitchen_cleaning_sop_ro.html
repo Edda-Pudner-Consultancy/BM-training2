@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curățare Bucătărie - SOP Pas cu Pas - B&M Professional Cleaning</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: #f9fafb;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #5EEAD4 0%, #14B8A6 100%);
+            padding: 2.5rem 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .company-name {
+            margin-bottom: 1rem;
+        }
+        
+        .company-name h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #374151;
+            letter-spacing: -0.5px;
+            margin-bottom: 0.25rem;
+        }
+        
+        .company-name p {
+            font-size: 1rem;
+            color: #0f766e;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        
+        .header-title {
+            color: white;
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-top: 1rem;
+        }
+        
+        .header-subtitle {
+            color: #f0fdfa;
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+        }
+        
+        /* Content */
+        .content {
+            padding: 2.5rem 2rem;
+        }
+        
+        .intro {
+            background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%);
+            border-left: 5px solid #14B8A6;
+            padding: 1.75rem;
+            margin-bottom: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .intro h2 {
+            color: #0f766e;
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+        }
+        
+        .intro p {
+            color: #115e59;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+        
+        /* Equipment Section */
+        .equipment-section {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border-left: 5px solid #f59e0b;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2.5rem;
+        }
+        
+        .equipment-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .equipment-emoji {
+            font-size: 2.5rem;
+        }
+        
+        .equipment-header h3 {
+            font-size: 1.5rem;
+            color: #92400e;
+            font-weight: 700;
+        }
+        
+        .equipment-list {
+            display: grid;
+            gap: 0.75rem;
+        }
+        
+        .equipment-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .bullet {
+            color: #f59e0b;
+            font-weight: 900;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+        
+        .equipment-item span {
+            color: #78350f;
+            font-size: 1.05rem;
+            font-weight: 500;
+        }
+        
+        /* Section Headers */
+        .section-header {
+            background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+            border-left: 5px solid #0284c7;
+            padding: 1.5rem;
+            margin: 3rem 0 2rem 0;
+            border-radius: 8px;
+        }
+        
+        .section-header h2 {
+            color: #075985;
+            font-size: 1.6rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .section-emoji {
+            font-size: 2rem;
+        }
+        
+        /* Step Cards */
+        .step-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border: 2px solid #e5e7eb;
+            border-left: 6px solid #14B8A6;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .step-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+        }
+        
+        .step-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #f3f4f6;
+        }
+        
+        .step-emoji {
+            font-size: 2.5rem;
+        }
+        
+        .step-header h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1f2937;
+        }
+        
+        /* Lists */
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        ul li {
+            padding: 0.5rem 0 0.5rem 2.5rem;
+            position: relative;
+            color: #374151;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+        
+        ul li:before {
+            content: "•";
+            position: absolute;
+            left: 1rem;
+            color: #14B8A6;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+        
+        ul ul {
+            margin-top: 0.5rem;
+        }
+        
+        ul ul li {
+            padding-left: 2rem;
+        }
+        
+        ul ul li:before {
+            left: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        /* Warning Boxes */
+        .warning-box {
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            border: 3px solid #ef4444;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .warning-title {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            color: #991b1b;
+            font-weight: 800;
+            font-size: 1.1rem;
+        }
+        
+        .warning-icon {
+            font-size: 1.5rem;
+        }
+        
+        .warning-box ul {
+            margin-top: 0;
+        }
+        
+        .warning-box ul li {
+            color: #7f1d1d;
+            font-weight: 600;
+            padding: 0.5rem 0 0.5rem 2rem;
+        }
+        
+        .warning-box ul li:before {
+            color: #dc2626;
+            left: 0.5rem;
+        }
+        
+        /* Deep Cleaning Card */
+        .deep-cleaning-card {
+            background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);
+            border: 3px solid #9333ea;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .deep-cleaning-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #d8b4fe;
+        }
+        
+        .deep-cleaning-header h3 {
+            color: #581c87;
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+        
+        .deep-cleaning-card > ul > li {
+            color: #581c87;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .deep-cleaning-card ul li:before {
+            color: #9333ea;
+        }
+        
+        .deep-cleaning-card ul ul li {
+            color: #6b21a8;
+            font-weight: 500;
+            font-size: 1.05rem;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #f3f4f6;
+            padding: 2rem;
+            text-align: center;
+            border-top: 3px solid #14B8A6;
+        }
+        
+        .footer p {
+            color: #6b7280;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        
+        .footer strong {
+            color: #0f766e;
+        }
+        
+        /* Print styles */
+        @media print {
+            body {
+                background: white;
+            }
+            
+            .step-card, .deep-cleaning-card {
+                page-break-inside: avoid;
+                box-shadow: none;
+                border: 2px solid #e5e7eb;
+            }
+        }
+        
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .header {
+                padding: 2rem 1.5rem;
+            }
+            
+            .company-name h1 {
+                font-size: 2rem;
+            }
+            
+            .header-title {
+                font-size: 1.4rem;
+            }
+            
+            .content {
+                padding: 2rem 1.5rem;
+            }
+            
+            .step-card {
+                padding: 1.5rem;
+            }
+            
+            .step-header h3 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="company-name">
+                <h1>B&M</h1>
+                <p>PROFESSIONAL CLEANING</p>
+            </div>
+            <h2 class="header-title">CURĂȚARE BUCĂTĂRIE - SOP PAS CU PAS</h2>
+            <p class="header-subtitle">Ghid de Instruire - Curățare Bucătărie</p>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <div class="intro">
+                <h2>Curățare Bucătărie - SOP Pas cu Pas</h2>
+                <p>Rutina zilnică de curățare + sarcini de curățare amanuntita</p>
+            </div>
+
+            <!-- Equipment Section -->
+            <div class="equipment-section">
+                <div class="equipment-header">
+                    <span class="equipment-emoji">🧼</span>
+                    <h3>PRODUSE ȘI ECHIPAMENTE NECESARE</h3>
+                </div>
+                <div class="equipment-list">
+                    <div class="equipment-item">
+                        <span class="bullet">•</span>
+                        <span>Burete de bucătărie</span>
+                    </div>
+                    <div class="equipment-item">
+                        <span class="bullet">•</span>
+                        <span>Laveta verde</span>
+                    </div>
+                    <div class="equipment-item">
+                        <span class="bullet">•</span>
+                        <span>Prosop verde (uscat)</span>
+                    </div>
+                    <div class="equipment-item">
+                        <span class="bullet">•</span>
+                        <span>Produs pentru bucătărie (sticlă verde)</span>
+                    </div>
+                    <div class="equipment-item">
+                        <span class="bullet">•</span>
+                        <span>Produs anticalcar (sticlă albă)</span>
+                    </div>
+                    <div class="equipment-item">
+                        <span class="bullet">•</span>
+                        <span>Produs pentru geamuri (sticlă albastră)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Daily Routine Section -->
+            <div class="section-header">
+                <h2><span class="section-emoji">📅</span> RUTINA ZILNICĂ DE CURĂȚARE</h2>
+            </div>
+
+            <!-- Step 1 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <span class="step-emoji">🥣</span>
+                    <h3>PASUL 1: MAI ÎNTÂI VASELE</h3>
+                </div>
+                <ul>
+                    <li>Colectează toate vasele murdare</li>
+                    <li>Pune-le în mașina de spălat vase</li>
+                    <li>Pornește mașina de spălat vase</li>
+                    <li>După ce spălarea s-a terminat, returnează articolele în dulapurile corecte, sortate pe categorii:
+                        <ul>
+                            <li>Farfuriile cu farfuriile</li>
+                            <li>Cănile cu cănile</li>
+                            <li>Tacâmurile în sertarul pentru tacâmuri</li>
+                            <li>Paharele cu paharele</li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="warning-box">
+                    <div class="warning-title">
+                        <span class="warning-icon">⚠️</span>
+                        NON NEGOCIABIL:
+                    </div>
+                    <ul>
+                        <li>Nici un vas murdar rămas în chiuvetă sau pe blaturi</li>
+                        <li>Toate articolele curate trebuie puse la locul corect - nu lăsate la scurs</li>
+                        <li>Totul trebuie sortat pe categorii</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <span class="step-emoji">🚪</span>
+                    <h3>PASUL 2: CURĂȚĂ UȘILE DULAPURILOR</h3>
+                </div>
+                <ul>
+                    <li>Clătește și stoarce buretele de bucătărie</li>
+                    <li>Pulverizează produs pentru bucătărie pe burete</li>
+                    <li>Șterge toate ușile dulapurilor, mai ales zonele cu amprente si marginea superioara a usilor</li>
+                    <li>Clătește și stoarce laveta verde</li>
+                    <li>Șterge din nou toate ușile dulapurilor folosind mișcări consistente (toate orizontale preferabil)</li>
+                </ul>
+                <div class="warning-box">
+                    <div class="warning-title">
+                        <span class="warning-icon">⚠️</span>
+                        NON NEGOCIABIL:
+                    </div>
+                    <ul>
+                        <li>Nici o amprentă vizibilă pe nici o ușă de dulap</li>
+                        <li>Nici o urmă de grăsime sau pete</li>
+                        <li>Mânerele trebuie sa fie curate și strălucitoare</li>
+                        <li>Folosește mișcări consistente pentru a evita dungile</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <span class="step-emoji">🧽</span>
+                    <h3>PASUL 3: CURĂȚĂ SUPRAFEȚELE ȘI APARATELE</h3>
+                </div>
+                <ul>
+                    <li>Clătește și stoarce buretele de bucătărie</li>
+                    <li>Pulverizează produs pentru bucătărie pe burete</li>
+                    <li>Folosește buretele pentru a șterge:
+                        <ul>
+                            <li>Mesele</li>
+                            <li>Toate blаturile, inclusiv sub obiecte</li>
+                            <li>Cuptoarele cu microunde (interior și exterior)</li>
+                            <li>Fierbătorul de apa</li>
+                            <li>Recipientele pentru cafea/ceai</li>
+                            <li>Orice obiect de pe blat</li>
+                        </ul>
+                    </li>
+                    <li>Clătește și stoarce laveta verde</li>
+                    <li>Șterge tot ce a fost curățat cu buretele</li>
+                    <li>Dacă este nevoie de lustruire, folosește prosopul verde</li>
+                </ul>
+                <div class="warning-box">
+                    <div class="warning-title">
+                        <span class="warning-icon">⚠️</span>
+                        NON NEGOCIABIL:
+                    </div>
+                    <ul>
+                        <li>Nici o firimitură, resturi de mâncare sau urme pe nicio suprafață</li>
+                        <li>Interiorul cuptorului cu microunde sa fie impecabil - fără stropi de mâncare</li>
+                        <li>Fierbătorul sa fie curat, fără urme de apă</li>
+                        <li>Toate recipientele sa fie curate</li>
+                        <li>Blатurile sa fie complet curate și uscate</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <span class="step-emoji">🚰</span>
+                    <h3>PASUL 4: ÎNMOAIE CHIUVETA ȘI ROBINETUL</h3>
+                </div>
+                <ul>
+                    <li>Clătește și stoarce din nou buretele și laveta verde</li>
+                    <li>Pulverizează de 3-4 ori produs anticalcar pe burete</li>
+                    <li>Folosește buretele pentru a înmuia chiuveta și robinetul</li>
+                    <li>Lasă produsul anticalcar să acționeze în timp ce continui cu pașii următori</li>
+                </ul>
+                <div class="warning-box">
+                    <div class="warning-title">
+                        <span class="warning-icon">⚠️</span>
+                        NON NEGOCIABIL:
+                    </div>
+                    <ul>
+                        <li>Atât chiuveta cât și robinetul trebuie sa fie complet acoperite cu produs</li>
+                        <li>Nu sări peste acest pas - produsul anticalcar are nevoie de timp să acționeze</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <span class="step-emoji">🍴</span>
+                    <h3>PASUL 5: CURĂȚĂ SCAUNELE ȘI ECHIPAMENTELE</h3>
+                </div>
+                <ul>
+                    <li>Clătește și stoarce din nou laveta verde,apoi foloseste-o pentru a curăța:
+                        <ul>
+                            <li>Tableta pentru comenzi produse (sau orice tablete/dispozitive)</li>
+                            <li>Ușa frigiderului (mai ales mânerele)</li>
+                            <li>Toate scaunele</li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="warning-box">
+                    <div class="warning-title">
+                        <span class="warning-icon">⚠️</span>
+                        NON NEGOCIABIL:
+                    </div>
+                    <ul>
+                        <li>Nicio amprentă pe ușa frigiderului sau mânere</li>
+                        <li>Tabletele/dispozitivele curate și fără urme</li>
+                        <li>Scaunele curate - fără urme de mâncare sau pete</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Step 6 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <span class="step-emoji">🗑️</span>
+                    <h3>PASUL 6: CURĂȚĂ COȘURILE DE GUNOI</h3>
+                </div>
+                <ul>
+                    <li>Scoate sacul de gunoi folosit</li>
+                    <li>Înlocuiește cu un sac nou, asezat estetic</li>
+                    <li>Șterge capacul si exteriorul coșului, dacă sunt murdare</li>
+                </ul>
+                <div class="warning-box">
+                    <div class="warning-title">
+                        <span class="warning-icon">⚠️</span>
+                        NON NEGOCIABIL:
+                    </div>
+                    <ul>
+                        <li>Sacul de gunoi trebuie montat corect - nu atârnând afară</li>
+                        <li>Exteriorul coșului curat, fără reziduri lipicioase</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Step 7 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <span class="step-emoji">🚰</span>
+                    <h3>PASUL 7: CURĂȚAREA FINALĂ A CHIUVETEI ȘI ROBINETULUI</h3>
+                </div>
+                <ul>
+                    <li>Revino la chiuvetă (produsul de calcar a acționat)</li>
+                    <li>Curata si clătește chiuveta cu buretele</li>
+                    <li>Folosește laveta verde (bine stoarsă) pentru a șterge chiuveta și a absorbi apa în exces</li>
+                    <li>Șterge și usucă robinetul până când strălucește</li>
+                    <li>Dacă este necesar, lustruiește chiuveta și robinetul cu prosopul verde</li>
+                </ul>
+                <div class="warning-box">
+                    <div class="warning-title">
+                        <span class="warning-icon">⚠️</span>
+                        NON NEGOCIABIL:
+                    </div>
+                    <ul>
+                        <li>Chiuveta sa fie impecabilă - fără pete, particule de mâncare sau urme de apă</li>
+                        <li>Robinetul trebuie să strălucească fără pete de apă sau amprente</li>
+                        <li>Chiuveta complet uscată - fără acumulare de apă</li>
+                        <li>Scurgerea sa fie curată</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Step 8 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <span class="step-emoji">🧹</span>
+                    <h3>PASUL 8: ASPIRĂ ȘI SPALĂ</h3>
+                </div>
+                <ul>
+                    <li>Aspiră întreaga podea a bucătăriei</li>
+                    <li>Apoi spală podeaua bine</li>
+                    <li>Acordă atenție specială colțurilor, sub mese si sub scaune</li>
+                    <li>Lasă podeaua să se usuce</li>
+                </ul>
+                <div class="warning-box">
+                    <div class="warning-title">
+                        <span class="warning-icon">⚠️</span>
+                        NON NEGOCIABIL:
+                    </div>
+                    <ul>
+                        <li>Nici o firimitură, murdărie sau resturi pe podea</li>
+                        <li>Podeaua trebuie spălată uniform - fără zone uscate sau acumulari de apa</li>
+                        <li>Colțurile și marginile sa fie curate</li>
+                        <li>Sub mese și scaune sa fie curat</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Deep Cleaning Section -->
+            <div class="section-header">
+                <h2><span class="section-emoji">🔍</span> CURĂȚARE AMANUNTITA (SAPTAMANAL) - Pași Suplimentari</h2>
+            </div>
+
+            <div class="deep-cleaning-card">
+                <div class="deep-cleaning-header">
+                    <span class="step-emoji">✨</span>
+                    <h3>SARCINI DE CURĂȚARE AMANUNTITA</h3>
+                </div>
+                <ul>
+                    <li>Îndepărtează toate pânzele de păianjen de pe tavane și din colțuri</li>
+                    
+                    <li>Șterge praful de pe toate suprafețele incluzând:
+                        <ul>
+                            <li>Plintele</li>
+                            <li>Ramele geamurilor</li>
+                            <li>Prizele electrice și întrerupătoarele de lumină</li>
+                            <li>Picioarele scaunelor</li>
+                        </ul>
+                    </li>
+                    
+                    <li>Curăță interiorul peretilor de sticla ai bucătăriei</li>
+                    
+                    <li>Curăță frigiderul (interior și exterior):
+                        <ul>
+                            <li>Sterge toate rafturile și sertarele cu laveta cu produs pentru bucătărie</li>
+                            <li>Aruncă orice este expirat sau fără etichetă/nume</li>
+                            <li>Șterge toate suprafețele din interior</li>
+                        </ul>
+                    </li>
+                    
+                    <li>Verifică și curăță mașina de spălat vase:
+                        <ul>
+                            <li>Curata si clateste filtrul</li>
+                            <li>Completeaza sarea</li>
+                            <li>Completeaza solutia de clătire</li>
+                        </ul>
+                    </li>
+                    
+                    <li>Curata cu otet calcarul din fierbătoarele de apa</li>
+                    
+                    <li>Verifică și completeaza sau înlocuiește:
+                        <ul>
+                            <li>Tabletele pentru mașina de spălat vase</li>
+                            <li>Solutia de clătire</li>
+                            <li>Detergentul de vase</li>
+                            <li>Săpunul pentru mâini</li>
+                            <li>Buretele de vase, cârpele și prosoapele</li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="warning-box">
+                    <div class="warning-title">
+                        <span class="warning-icon">⚠️</span>
+                        NON NEGOCIABIL:
+                    </div>
+                    <ul>
+                        <li>Nici o pânză de păianjen vizibilă nicăieri</li>
+                        <li>Curățarea prafului trebuie să fie temeinică - verifică partea de sus a dulapurilor, ramele ferestrelor, plintele</li>
+                        <li>Frigiderul sa fie impecabil în interior - verifică datele de expirare și îndepărtează mâncarea veche</li>
+                        <li>Filtrul mașinii de spălat vase sa fie curat</li>
+                        <li>Toate consumabilele trebuie completate</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>Întrebări? Întreabă-o pe <strong>Maria</strong> sau pe <strong>supervizorul tău</strong>.</p>
+        </div>
+    </div>
+</body>
+</html>

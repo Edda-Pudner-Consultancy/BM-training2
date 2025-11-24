@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ștergere Praf - SOP Pas cu Pas - B&M Professional Cleaning</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: #f9fafb;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #5EEAD4 0%, #14B8A6 100%);
+            padding: 2.5rem 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .company-name {
+            margin-bottom: 1rem;
+        }
+        
+        .company-name h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #374151;
+            letter-spacing: -0.5px;
+            margin-bottom: 0.25rem;
+        }
+        
+        .company-name p {
+            font-size: 1rem;
+            color: #0f766e;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        
+        .header-title {
+            color: white;
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-top: 1rem;
+        }
+        
+        .header-subtitle {
+            color: #f0fdfa;
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+        }
+        
+        /* Content */
+        .content {
+            padding: 2.5rem 2rem;
+        }
+        
+        .intro {
+            background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%);
+            border-left: 5px solid #14B8A6;
+            padding: 1.75rem;
+            margin-bottom: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .intro h2 {
+            color: #0f766e;
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+        }
+        
+        .intro p {
+            color: #115e59;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+        
+        /* Equipment Section */
+        .equipment-section {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border-left: 5px solid #f59e0b;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2.5rem;
+        }
+        
+        .equipment-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .equipment-emoji {
+            font-size: 2.5rem;
+        }
+        
+        .equipment-header h3 {
+            font-size: 1.5rem;
+            color: #92400e;
+            font-weight: 700;
+        }
+        
+        .equipment-list {
+            display: grid;
+            gap: 0.75rem;
+        }
+        
+        .equipment-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .bullet {
+            color: #f59e0b;
+            font-weight: 900;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+        
+        .equipment-item span {
+            color: #78350f;
+            font-size: 1.05rem;
+            font-weight: 500;
+        }
+        
+        /* Section Headers */
+        .section-header {
+            background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+            border-left: 5px solid #0284c7;
+            padding: 1.5rem;
+            margin: 3rem 0 2rem 0;
+            border-radius: 8px;
+        }
+        
+        .section-header h2 {
+            color: #075985;
+            font-size: 1.6rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .section-emoji {
+            font-size: 2rem;
+        }
+        
+        /* Quick Clean Section */
+        .quick-clean-section {
+            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+            border-left: 5px solid #10b981;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2.5rem;
+        }
+        
+        .quick-clean-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .quick-clean-header h3 {
+            font-size: 1.4rem;
+            color: #065f46;
+            font-weight: 700;
+        }
+        
+        .quick-clean-section p {
+            color: #047857;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        
+        .quick-clean-section ul {
+            margin-top: 0.5rem;
+        }
+        
+        .quick-clean-section ul li {
+            color: #065f46;
+            font-weight: 500;
+        }
+        
+        .quick-clean-section ul li:before {
+            color: #10b981;
+        }
+        
+        /* Step Cards */
+        .step-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border: 2px solid #e5e7eb;
+            border-left: 6px solid #14B8A6;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .step-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+        }
+        
+        .step-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #f3f4f6;
+        }
+        
+        .step-emoji {
+            font-size: 2.5rem;
+        }
+        
+        .step-header h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1f2937;
+        }
+        
+        /* Lists */
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        ul li {
+            padding: 0.5rem 0 0.5rem 2.5rem;
+            position: relative;
+            color: #374151;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+        
+        ul li:before {
+            content: "•";
+            position: absolute;
+            left: 1rem;
+            color: #14B8A6;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+        
+        /* Important Note Box */
+        .important-note {
+            background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+            border-left: 5px solid #3b82f6;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .important-note p {
+            color: #1e3a8a;
+            font-size: 1.05rem;
+            font-weight: 500;
+            line-height: 1.7;
+        }
+        
+        /* Warning Boxes */
+        .warning-box {
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            border: 3px solid #ef4444;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .warning-title {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            color: #991b1b;
+            font-weight: 800;
+            font-size: 1.1rem;
+        }
+        
+        .warning-icon {
+            font-size: 1.5rem;
+        }
+        
+        .warning-box ul {
+            margin-top: 0;
+        }
+        
+        .warning-box ul li {
+            color: #7f1d1d;
+            font-weight: 600;
+            padding: 0.5rem 0 0.5rem 2rem;
+        }
+        
+        .warning-box ul li:before {
+            color: #dc2626;
+            left: 0.5rem;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #f3f4f6;
+            padding: 2rem;
+            text-align: center;
+            border-top: 3px solid #14B8A6;
+        }
+        
+        .footer p {
+            color: #6b7280;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        
+        .footer strong {
+            color: #0f766e;
+        }
+        
+        /* Print styles */
+        @media print {
+            body {
+                background: white;
+            }
+            
+            .step-card {
+                page-break-inside: avoid;
+                box-shadow: none;
+                border: 2px solid #e5e7eb;
+            }
+        }
+        
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .header {
+                padding: 2rem 1.5rem;
+            }
+            
+            .company-name h1 {
+                font-size: 2rem;
+            }
+            
+            .header-title {
+                font-size: 1.4rem;
+            }
+            
+            .content {
+                padding: 2rem 1.5rem;
+            }
+            
+            .step-card {
+                padding: 1.5rem;
+            }
+            
+            .step-header h3 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="company-name">
+                <h1>B&M</h1>
+                <p>PROFESSIONAL CLEANING</p>
+            </div>
+            <h2 class="header-title">ȘTERGERE PRAF - SOP PAS CU PAS</h2>
+            <p class="header-subtitle">Ghid de Instruire - Ștergere Praf</p>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <div class="intro">
+                <h2>Ștergere Praf - SOP Pas cu Pas</h2>
+                <p>Ștergere rapidă zilnică + rutina săptămânală/curățare amanuntita</p>
+            </div>
+
+            <!-- Equipment Section -->
+            <div class="equipment-section">
+                <div class="equipment-header">
+                    <span class="equipment-emoji">🧼</span>
+                    <h3>PRODUSE ȘI CÂRPE NECESARE</h3>
+                </div>
+                <div class="equipment-list">
+                    <div class="equipment-item">
+                        <span class="bullet">•</span>
+                        <span>Cârpă galbenă</span>
+                    </div>
+                    <div class="equipment-item">
+                        <span class="bullet">•</span>
+                        <span>Cârpă albastră pufoasă</span>
+                    </div>
+                    <div class="equipment-item">
+                        <span class="bullet">•</span>
+                        <span>Cârpă albastră pentru geam</span>
+                    </div>
+                    <div class="equipment-item">
+                        <span class="bullet">•</span>
+                        <span>Produs pentru geam (sticlă albastră)</span>
+                    </div>
+                    <div class="equipment-item">
+                        <span class="bullet">•</span>
+                        <span>Produs de curățare "Magic"</span>
+                    </div>
+                    <div class="equipment-item">
+                        <span class="bullet">•</span>
+                        <span>Laveta galbena</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Daily Cleaning Section -->
+            <div class="section-header">
+                <h2><span class="section-emoji">📅</span> CURĂȚARE ZILNICĂ</h2>
+            </div>
+
+            <div class="quick-clean-section">
+                <div class="quick-clean-header">
+                    <span class="equipment-emoji">✅</span>
+                    <h3>Ștergere Rapidă a Suprafețelor (Doar Dacă/Unde Este Necesar)</h3>
+                </div>
+                <p>Pulverizează de cateva ori produs pentru geam pe cârpa galbenă (nu pulveriza niciodată direct pe suprafețe)</p>
+                <p>Șterge doar zonele vizibile și accesibile care sunt prăfuite sau murdare</p>
+                <p style="font-weight: 600; margin-top: 1rem;">Suprafețe tipice de verificat:</p>
+                <ul>
+                    <li>Mese</li>
+                    <li>Birouri</li>
+                    <li>Ghișee de recepție</li>
+                </ul>
+                <div class="warning-box">
+                    <div class="warning-title">
+                        <span class="warning-icon">⚠️</span>
+                        NON NEGOCIABIL:
+                    </div>
+                    <ul>
+                        <li>Nu pulveriza niciodată produsul direct pe suprafețe - întotdeauna pe cârpă</li>
+                        <li>Curata doar suprafetele accesibile si doar unde este necesar - ștergerea zilnică este mentenanță rapidă</li>
+                        <li>Nu lasa praf/urme pe suprafețele de trafic intens</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Weekly Deep Cleaning Section -->
+            <div class="section-header">
+                <h2><span class="section-emoji">🔁</span> SĂPTĂMÂNAL / CURĂȚARE AMANUNTITA</h2>
+            </div>
+
+            <!-- Step 1 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <span class="step-emoji">🕸️</span>
+                    <h3>PASUL 1: ÎNDEPĂRTEAZĂ PÂNZELE DE PĂIANJEN</h3>
+                </div>
+                <p style="margin-bottom: 1rem; color: #374151; font-size: 1.05rem;">Folosește o perie lungă sau o cârpă uscată pentru a îndepărta pânzele de păianjen de pe:</p>
+                <ul>
+                    <li>Tavane</li>
+                    <li>Colțuri (unde pereții se întâlnesc cu tavanul)</li>
+                    <li>Marginile superioare ale pereților și corpurilor de iluminat</li>
+                </ul>
+                <div class="warning-box">
+                    <div class="warning-title">
+                        <span class="warning-icon">⚠️</span>
+                        NON NEGOCIABIL:
+                    </div>
+                    <ul>
+                        <li>Nicio pânză de păianjen vizibilă nicăieri - verifică toate colțurile temeinic</li>
+                        <li>Verifică corpurile de iluminat și marginile superioare ale ușilor</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <span class="step-emoji">🟡</span>
+                    <h3>PASUL 2: ȘTERGERE COMPLETĂ A PRAFULUI - TOATE SUPRAFEȚELE</h3>
+                </div>
+                <p style="margin-bottom: 1rem; color: #374151; font-size: 1.05rem;">Pulverizează produs pentru geam pe cârpa galbenă (nu pulveriza niciodată direct pe suprafețe)</p>
+                <p style="margin-bottom: 1rem; color: #374151; font-size: 1.05rem; font-weight: 600;">Șterge toate suprafețele accesibile:</p>
+                <ul>
+                    <li>Suprafețe orizontale (birouri, mese, rafturi)</li>
+                    <li>Suprafețe verticale (uși, pereți unde este necesar)</li>
+                    <li>Sub/în jurul obiectelor dacă este posibil</li>
+                </ul>
+                <p style="margin: 1.5rem 0 1rem 0; color: #374151; font-size: 1.05rem; font-weight: 600;">Include aceste zone:</p>
+                <ul>
+                    <li>Plintele</li>
+                    <li>Ramele ferestrelor și ușilor</li>
+                    <li>Rafturile și dulapurile (partea de deasupra, din fata si lateralele)</li>
+                    <li>Scaunele, mesele, birourile</li>
+                    <li>Computerele, telefoanele, tastaturile</li>
+                    <li>Pervazele ferestrelor, margini, calorifere</li>
+                    <li>Imprimante, stingătoare</li>
+                    <li>Prizele, întrerupătoarele electrice</li>
+                    <li>Plăcile metalice și mânerele ușilor</li>
+                </ul>
+                <div class="warning-box">
+                    <div class="warning-title">
+                        <span class="warning-icon">⚠️</span>
+                        NON NEGOCIABIL:
+                    </div>
+                    <ul>
+                        <li>Fara praf sau urme pe suprafetele accesibile</li>
+                        <li>Plintele trebuie curatate pe toată lungimea lor</li>
+                        <li>Fara praf sau urme pe ramele ferestrelor și pervaze</li>
+                        <li>Verifică partea de sus a dulapurilor și suprafețele înalte</li>
+                        <li>Nu rata întrerupătoarele de lumină și prizele - acestea colectează amprente</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <span class="step-emoji">🔵</span>
+                    <h3>PASUL 3: SUPRAFEȚE STRĂLUCITOARE ȘI DELICATE</h3>
+                </div>
+                <p style="margin-bottom: 1rem; color: #374151; font-size: 1.05rem;">Folosește cârpa albastră pufoasă pentru a lustrui:</p>
+                <ul>
+                    <li>Ecranele și monitoarele</li>
+                    <li>Sticla de la tablouri</li>
+                    <li>Ramele ușilor/ferestrelor (dacă au finisaj strălucitor)</li>
+                    <li>Mânerele și plăcile metalice</li>
+                </ul>
+                <div class="important-note">
+                    <p><strong>⚠️ Important:</strong> Pentru obiectele nesecurizate sau montate pe perete (cum ar fi ramele), ține cu o mână și curăță cu cealaltă pentru a preveni căderea lor.</p>
+                </div>
+                <div class="warning-box">
+                    <div class="warning-title">
+                        <span class="warning-icon">⚠️</span>
+                        NON NEGOCIABIL:
+                    </div>
+                    <ul>
+                        <li>Ecranele computerelor trebuie sa fie fără urme, impecabile</li>
+                        <li>Nicio amprentă pe monitoare sau suprafețe strălucitoare</li>
+                        <li>Ramele trebuie fără praf pe partea de sus și curate pe sticlă</li>
+                        <li>Fii întotdeauna atent cu articolele montate pe perete</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <span class="step-emoji">✨</span>
+                    <h3>PASUL 4: ÎNDEPĂRTEAZĂ URMELE ȘI PETELE</h3>
+                </div>
+                <ul>
+                    <li>Clătește o laveta galbena și stoarce-o bine</li>
+                    <li>Pulverizează de 2-3 ori produs de curățare "Magic" pe cârpă</li>
+                    <li>Folosește-o pentru a șterge:
+                        <ul style="margin-top: 0.5rem;">
+                            <li>Petele și stropii de pe uși</li>
+                            <li>Plintele (dacă sunt foarte murdare)</li>
+                            <li>Urmele de pe pereți</li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="warning-box">
+                    <div class="warning-title">
+                        <span class="warning-icon">⚠️</span>
+                        NON NEGOCIABIL:
+                    </div>
+                    <ul>
+                        <li>Nicio urmă vizibilă sau pată pe uși</li>
+                        <li>Plintele trebuie sa fie curate, nu doar șterse de praf</li>
+                        <li>Urmele de pe pereți trebuie îndepărtate</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <span class="step-emoji">🪞</span>
+                    <h3>PASUL 5: STICLĂ ȘI OGLINZI</h3>
+                </div>
+                <p style="margin-bottom: 1rem; color: #374151; font-size: 1.05rem;">Folosește cârpa albastră pentru geam pentru a curăța:</p>
+                <ul>
+                    <li>Oglinzile</li>
+                    <li>Ușile de sticlă</li>
+                    <li>Pereții despărțitori din sticlă</li>
+                </ul>
+                <p style="margin: 1.5rem 0 0.5rem 0; color: #374151; font-size: 1.05rem;">Pulverizează produs pentru geam pe cârpă (nu direct pe sticlă)</p>
+                <p style="margin-bottom: 1rem; color: #374151; font-size: 1.05rem;">Șterge într-o singură direcție pentru a evita dungile</p>
+                <div class="warning-box">
+                    <div class="warning-title">
+                        <span class="warning-icon">⚠️</span>
+                        NON NEGOCIABIL:
+                    </div>
+                    <ul>
+                        <li>Toată sticla și oglinzile trebuie sa fie fără urme</li>
+                        <li>Nicio amprentă, pată sau urmă de apă</li>
+                        <li>Verifică marginile și colțurile - adesea sunt omise</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Step 6 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <span class="step-emoji">🧹</span>
+                    <h3>PASUL 6: CURĂȚAREA PODELEI</h3>
+                </div>
+                <ul>
+                    <li>Aspiră toate podelele</li>
+                    <li>Spală toate podelele</li>
+                    <li>Acordă atenție colțurilor și sub mobilier</li>
+                    <li>Lasă podelele să se usuce complet</li>
+                </ul>
+                <div class="warning-box">
+                    <div class="warning-title">
+                        <span class="warning-icon">⚠️</span>
+                        NON NEGOCIABIL:
+                    </div>
+                    <ul>
+                        <li>Fara praf sau resturi vizibile pe nicio podea</li>
+                        <li>Podelele trebuie spălate uniform - fără zone uscate</li>
+                        <li>Colțurile și marginile trebuie sa fie curate</li>
+                        <li>Sub birouri și mobilier trebuie sa fie curat</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>Întrebări? Întreabă-o pe <strong>Maria</strong> sau pe <strong>supervizorul tău</strong>.</p>
+        </div>
+    </div>
+</body>
+</html>

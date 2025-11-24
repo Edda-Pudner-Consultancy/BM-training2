@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan de Urgență pentru Munca Solitara - B&M Professional Cleaning</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: #f9fafb;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #5EEAD4 0%, #14B8A6 100%);
+            padding: 2.5rem 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .company-name {
+            margin-bottom: 1rem;
+        }
+        
+        .company-name h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #374151;
+            letter-spacing: -0.5px;
+            margin-bottom: 0.25rem;
+        }
+        
+        .company-name p {
+            font-size: 1rem;
+            color: #0f766e;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        
+        .header-title {
+            color: white;
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-top: 1rem;
+        }
+        
+        .header-subtitle {
+            color: #f0fdfa;
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+        }
+        
+        /* Content */
+        .content {
+            padding: 2.5rem 2rem;
+        }
+        
+        .intro {
+            background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+            border-left: 5px solid #3b82f6;
+            padding: 1.75rem;
+            margin-bottom: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .intro h2 {
+            color: #1e40af;
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .intro p {
+            color: #1e3a8a;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+        
+        /* Priority Section */
+        .priority-section {
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            border: 3px solid #ef4444;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2.5rem;
+        }
+        
+        .priority-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #fca5a5;
+        }
+        
+        .priority-emoji {
+            font-size: 2.5rem;
+        }
+        
+        .priority-header h3 {
+            font-size: 1.6rem;
+            color: #991b1b;
+            font-weight: 800;
+        }
+        
+        .priority-intro {
+            color: #7f1d1d;
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        
+        .priority-list {
+            display: grid;
+            gap: 0.75rem;
+        }
+        
+        .priority-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            border-left: 4px solid #dc2626;
+        }
+        
+        .priority-number {
+            background: #dc2626;
+            color: white;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+        
+        .priority-emoji-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .priority-item span {
+            color: #7f1d1d;
+            font-size: 1.05rem;
+            font-weight: 600;
+        }
+        
+        /* Optional Section */
+        .optional-section {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border-left: 5px solid #f59e0b;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2.5rem;
+        }
+        
+        .optional-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .optional-header h3 {
+            font-size: 1.5rem;
+            color: #92400e;
+            font-weight: 700;
+        }
+        
+        .optional-list {
+            display: grid;
+            gap: 0.75rem;
+        }
+        
+        .optional-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .optional-bullet {
+            color: #f59e0b;
+            font-weight: 900;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+        
+        .optional-item span {
+            color: #78350f;
+            font-size: 1.05rem;
+            font-weight: 500;
+        }
+        
+        /* Info Cards */
+        .info-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border: 2px solid #e5e7eb;
+            border-left: 6px solid #14B8A6;
+        }
+        
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #f3f4f6;
+        }
+        
+        .card-emoji {
+            font-size: 2.5rem;
+        }
+        
+        .card-header h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1f2937;
+        }
+        
+        .card-content {
+            color: #374151;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+        
+        ol {
+            list-style: none;
+            counter-reset: step-counter;
+            padding-left: 0;
+            margin: 1rem 0;
+        }
+        
+        ol li {
+            counter-increment: step-counter;
+            padding: 0.75rem 0 0.75rem 3rem;
+            position: relative;
+            color: #374151;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 0.5rem;
+        }
+        
+        ol li:before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0.65rem;
+            background: #14B8A6;
+            color: white;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+        
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 1rem 0;
+        }
+        
+        ul li {
+            padding: 0.5rem 0 0.5rem 2.5rem;
+            position: relative;
+            color: #374151;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+        
+        ul li:before {
+            content: "•";
+            position: absolute;
+            left: 1rem;
+            color: #14B8A6;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+        
+        .subsection-title {
+            font-weight: 700;
+            color: #374151;
+            font-size: 1.15rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+            border-left: 4px solid #0284c7;
+            padding: 1rem;
+            border-radius: 6px;
+            margin: 1rem 0;
+        }
+        
+        .highlight-box p {
+            color: #075985;
+            font-weight: 600;
+            font-size: 1.05rem;
+        }
+        
+        /* Checklist */
+        .checklist-card {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            border: 3px solid #22c55e;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2.5rem;
+        }
+        
+        .checklist-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .checklist-header h3 {
+            font-size: 1.6rem;
+            color: #166534;
+            font-weight: 800;
+        }
+        
+        .checklist-items {
+            display: grid;
+            gap: 0.75rem;
+        }
+        
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .checkbox {
+            color: #22c55e;
+            font-weight: 900;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+        
+        .checklist-item span {
+            color: #166534;
+            font-size: 1.05rem;
+            font-weight: 500;
+        }
+        
+        /* Remember Box */
+        .remember-box {
+            background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%);
+            border: 3px solid #ec4899;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2.5rem;
+            text-align: center;
+        }
+        
+        .remember-box h3 {
+            color: #9f1239;
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+        
+        .remember-box p {
+            color: #831843;
+            font-size: 1.15rem;
+            font-weight: 600;
+            line-height: 1.7;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #f3f4f6;
+            padding: 2rem;
+            text-align: center;
+            border-top: 3px solid #14B8A6;
+        }
+        
+        .footer p {
+            color: #6b7280;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        
+        .footer strong {
+            color: #0f766e;
+        }
+        
+        /* Print styles */
+        @media print {
+            body {
+                background: white;
+            }
+            
+            .priority-section, .info-card, .checklist-card {
+                page-break-inside: avoid;
+                box-shadow: none;
+            }
+        }
+        
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .header {
+                padding: 2rem 1.5rem;
+            }
+            
+            .company-name h1 {
+                font-size: 2rem;
+            }
+            
+            .header-title {
+                font-size: 1.4rem;
+            }
+            
+            .content {
+                padding: 2rem 1.5rem;
+            }
+            
+            .priority-section, .info-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="company-name">
+                <h1>B&M</h1>
+                <p>PROFESSIONAL CLEANING</p>
+            </div>
+            <h2 class="header-title">PLAN DE URGENȚĂ PENTRU MUNCA SOLITARA</h2>
+            <p class="header-subtitle">Plan de Urgență pentru munca solitara<br>Pentru angajatii din schimbul de seară care lucrează singuri</p>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <!-- Introduction -->
+            <div class="intro">
+                <h2><span>📋</span> DE CE EXISTĂ ACEST PLAN</h2>
+                <p>Această procedură asigură continuarea curățeniei de calitate chiar și când lucrezi singur. Urmează acești pași pentru a menține standardele și a rămâne în siguranță.</p>
+            </div>
+
+            <!-- Priority Tasks -->
+            <div class="priority-section">
+                <div class="priority-header">
+                    <span class="priority-emoji">🔴</span>
+                    <h3>SARCINI PRIORITARE (NON NEGOCIABILE)</h3>
+                </div>
+                <p class="priority-intro">Acestea TREBUIE completate, chiar dacă ești singur:</p>
+                <div class="priority-list">
+                    <div class="priority-item">
+                        <div class="priority-number">1</div>
+                        <span class="priority-emoji-icon">🍽️</span>
+                        <span>Umple mașinile de spălat vase</span>
+                    </div>
+                    <div class="priority-item">
+                        <div class="priority-number">2</div>
+                        <span class="priority-emoji-icon">🍴</span>
+                        <span>Fa ordine rapid in bucătării si receptie</span>
+                    </div>
+                    <div class="priority-item">
+                        <div class="priority-number">3</div>
+                        <span class="priority-emoji-icon">👆</span>
+                        <span>Curăță amprentele de pe suprafețele de sticla ( usi si geamuri )</span>
+                    </div>
+                    <div class="priority-item">
+                        <div class="priority-number">4</div>
+                        <span class="priority-emoji-icon">🗑️</span>
+                        <span>Golește toate coșurile de gunoi</span>
+                    </div>
+                    <div class="priority-item">
+                        <div class="priority-number">5</div>
+                        <span class="priority-emoji-icon">🚽</span>
+                        <span>Curăță rapid toaletele și completeaza consumabilele</span>
+                    </div>
+                    <div class="priority-item">
+                        <div class="priority-number">6</div>
+                        <span>Da cu aspiratorul doar unde este necesar</span>
+                    </div>
+                    <div class="priority-item">
+                        <div class="priority-number">7</div>
+                        <span class="priority-emoji-icon">🧽</span>
+                        <span>Folosește talpa pentru a aduna gunoaiele si mopul umed doar unde sunt urme sau pete</span>
+                    </div>
+                    <div class="priority-item">
+                        <div class="priority-number">8</div>
+                        <span class="priority-emoji-icon">📦</span>
+                        <span>Scoate gunoiul</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Optional Tasks -->
+            <div class="optional-section">
+                <div class="optional-header">
+                    <span class="priority-emoji">🟡</span>
+                    <h3>CE POATE FI OMIS DACĂ NU AI TIMP</h3>
+                </div>
+                <div class="optional-list">
+                    <div class="optional-item">
+                        <span class="optional-bullet">•</span>
+                        <span>🧹 Sarcinile săptămânale și curățenia amanuntita</span>
+                    </div>
+                    <div class="optional-item">
+                        <span class="optional-bullet">•</span>
+                        <span>💨 Ștergerea prafului (decât dacă este cerut specific)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Access & Security -->
+            <div class="info-card">
+                <div class="card-header">
+                    <span class="card-emoji">🔐</span>
+                    <h3>ACCES ȘI SECURITATE</h3>
+                </div>
+                <div class="card-content">
+                    <p style="font-weight: 600; margin-bottom: 1rem;">Dacă nu poți accesa o cameră:</p>
+                    <ol>
+                        <li>Nu forța intrarea</li>
+                        <li>Las-o nefacuta și continuă cu altceva</li>
+                        <li>Raportează imediat în grupul WhatsApp</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Communication -->
+            <div class="info-card">
+                <div class="card-header">
+                    <span class="card-emoji">📱</span>
+                    <h3>COMUNICARE</h3>
+                </div>
+                <div class="card-content">
+                    <p class="subsection-title">Protocolul de Contact de Urgență</p>
+                    <div class="highlight-box">
+                        <p>✅ Folosește grupul WhatsApp pentru TOATE urgențele</p>
+                    </div>
+                    <p style="margin-top: 1rem; font-style: italic; color: #6b7280;">Angela este liderul echipei (s-ar putea să nu fie întotdeauna la locul de muncă)</p>
+                    
+                    <p class="subsection-title">Raportează Aceste Probleme:</p>
+                    <ul>
+                        <li>Nu poti accesa anumite spatii</li>
+                        <li>Echipamentul stricat</li>
+                        <li>Rămâi fără produse</li>
+                        <li>Probleme de siguranță</li>
+                    </ul>
+                    
+                    <p class="subsection-title">Ajutor Imediat Necesar:</p>
+                    <ul>
+                        <li>Rănire sau accident</li>
+                        <li>Încălcarea securității</li>
+                        <li>Defecțiune majoră a echipamentului</li>
+                        <li>Activitate suspectă</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Products & Stock -->
+            <div class="info-card">
+                <div class="card-header">
+                    <span class="card-emoji">🧴</span>
+                    <h3>PRODUSE DE CURĂȚENIE ȘI STOC MATERIALE</h3>
+                </div>
+                <div class="card-content">
+                    <p style="font-weight: 600; margin-bottom: 1rem;">Dacă ceva se termină (spray, cârpe, etc.):</p>
+                    <ol>
+                        <li>Verifică Stocul 🔍</li>
+                        <li>Scrie în WhatsApp imediat 📝</li>
+                        <li>Continuă Munca ✅</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- End of Shift Checklist -->
+            <div class="checklist-card">
+                <div class="checklist-header">
+                    <span class="priority-emoji">✅</span>
+                    <h3>LISTA DE VERIFICARE SFÂRȘITUL SCHIMBULUI</h3>
+                </div>
+                <div class="checklist-items">
+                    <div class="checklist-item">
+                        <span class="checkbox">□</span>
+                        <span>Toate sarcinile prioritare completate</span>
+                    </div>
+                    <div class="checklist-item">
+                        <span class="checkbox">□</span>
+                        <span>Tot gunoiul scos afară</span>
+                    </div>
+                    <div class="checklist-item">
+                        <span class="checkbox">□</span>
+                        <span>Echipamentul curățat și depozitat</span>
+                    </div>
+                    <div class="checklist-item">
+                        <span class="checkbox">□</span>
+                        <span>Orice problema raportata în WhatsApp</span>
+                    </div>
+                    <div class="checklist-item">
+                        <span class="checkbox">□</span>
+                        <span>Ușile încuiate și alarma setata</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Remember Box -->
+            <div class="remember-box">
+                <h3><span>❤️</span> AMINTIȚI-VĂ: CALITATEA PESTE VITEZĂ</h3>
+                <p>Este preferabil să faci mai puține sarcini bine decât multe sarcini prost</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>Întrebări? Întreab-o pe <strong>Maria</strong> sau <strong>Angela</strong></p>
+        </div>
+    </div>
+</body>
+</html>

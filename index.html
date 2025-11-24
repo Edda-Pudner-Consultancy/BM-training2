@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B&M Professional Cleaning - Centru de Instruire</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%);
+            min-height: 100vh;
+            padding: 1rem;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #5EEAD4 0%, #14B8A6 100%);
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            margin-bottom: 2rem;
+        }
+        
+        .company-name h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            color: #374151;
+            letter-spacing: -1px;
+            margin-bottom: 0.25rem;
+        }
+        
+        .company-name p {
+            font-size: 1.1rem;
+            color: #0f766e;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .header-title {
+            color: white;
+            font-size: 2rem;
+            font-weight: 800;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        /* Section Headers */
+        .section {
+            margin-bottom: 2.5rem;
+        }
+        
+        .section-header {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .section-icon {
+            font-size: 2.5rem;
+        }
+        
+        .section-header h2 {
+            font-size: 1.8rem;
+            color: #0f766e;
+            font-weight: 800;
+        }
+        
+        /* Grid Layout */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.25rem;
+        }
+        
+        /* Buttons */
+        .resource-button {
+            background: white;
+            border: none;
+            border-radius: 12px;
+            padding: 1.75rem;
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            text-decoration: none;
+            display: block;
+            border-left: 6px solid #14B8A6;
+        }
+        
+        .resource-button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        
+        .resource-button:active {
+            transform: translateY(-2px);
+        }
+        
+        .audio-button {
+            border-left-color: #f59e0b;
+        }
+        
+        .audio-button.disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        
+        .audio-button.disabled:hover {
+            transform: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        
+        .button-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .button-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+        
+        .button-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #1f2937;
+            line-height: 1.3;
+        }
+        
+        .button-subtitle {
+            color: #6b7280;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+        
+        .coming-soon {
+            display: inline-block;
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            color: #92400e;
+            padding: 0.25rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-top: 0.5rem;
+        }
+        
+        /* Footer */
+        .footer {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            margin-top: 3rem;
+        }
+        
+        .footer p {
+            color: #6b7280;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer strong {
+            color: #0f766e;
+        }
+        
+        .footer-icon {
+            font-size: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .company-name h1 {
+                font-size: 2.5rem;
+            }
+            
+            .header-title {
+                font-size: 1.5rem;
+            }
+            
+            .section-header h2 {
+                font-size: 1.5rem;
+            }
+            
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .company-name h1 {
+                font-size: 2rem;
+            }
+            
+            .header-title {
+                font-size: 1.3rem;
+            }
+            
+            .resource-button {
+                padding: 1.5rem;
+            }
+            
+            .button-title {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="company-name">
+                <h1>B&M</h1>
+                <p>PROFESSIONAL CLEANING</p>
+            </div>
+            <h2 class="header-title">🎓 Centru de Instruire</h2>
+        </div>
+
+        <!-- Audio Section -->
+        <div class="section">
+            <div class="section-header">
+                <span class="section-icon">🔊</span>
+                <h2>Instrucțiuni Audio</h2>
+            </div>
+            <div class="grid">
+                <button class="resource-button audio-button disabled" onclick="playAudio('dilution')">
+                    <div class="button-header">
+                        <span class="button-icon">🔵</span>
+                        <div>
+                            <div class="button-title">Ghid de Diluare Produse</div>
+                            <div class="button-subtitle">Apasă aici pentru instrucțiuni audio</div>
+                        </div>
+                    </div>
+                    <span class="coming-soon">Curând disponibil</span>
+                </button>
+
+                <button class="resource-button audio-button disabled" onclick="playAudio('shower')">
+                    <div class="button-header">
+                        <span class="button-icon">🚿</span>
+                        <div>
+                            <div class="button-title">Curățare Duș</div>
+                            <div class="button-subtitle">Apasă aici pentru instrucțiuni audio</div>
+                        </div>
+                    </div>
+                    <span class="coming-soon">Curând disponibil</span>
+                </button>
+
+                <button class="resource-button audio-button disabled" onclick="playAudio('kitchen')">
+                    <div class="button-header">
+                        <span class="button-icon">🍽️</span>
+                        <div>
+                            <div class="button-title">Curățare Bucătărie</div>
+                            <div class="button-subtitle">Apasă aici pentru instrucțiuni audio</div>
+                        </div>
+                    </div>
+                    <span class="coming-soon">Curând disponibil</span>
+                </button>
+
+                <button class="resource-button audio-button disabled" onclick="playAudio('dusting')">
+                    <div class="button-header">
+                        <span class="button-icon">✨</span>
+                        <div>
+                            <div class="button-title">Ștergere Praf</div>
+                            <div class="button-subtitle">Apasă aici pentru instrucțiuni audio</div>
+                        </div>
+                    </div>
+                    <span class="coming-soon">Curând disponibil</span>
+                </button>
+
+                <button class="resource-button audio-button disabled" onclick="playAudio('toilet')">
+                    <div class="button-header">
+                        <span class="button-icon">🚽</span>
+                        <div>
+                            <div class="button-title">Curățare Toalete</div>
+                            <div class="button-subtitle">Apasă aici pentru instrucțiuni audio</div>
+                        </div>
+                    </div>
+                    <span class="coming-soon">Curând disponibil</span>
+                </button>
+
+                <button class="resource-button audio-button disabled" onclick="playAudio('washing')">
+                    <div class="button-header">
+                        <span class="button-icon">🧺</span>
+                        <div>
+                            <div class="button-title">Spălare Cârpe & Mopuri</div>
+                            <div class="button-subtitle">Apasă aici pentru instrucțiuni audio</div>
+                        </div>
+                    </div>
+                    <span class="coming-soon">Curând disponibil</span>
+                </button>
+
+                <button class="resource-button audio-button disabled" onclick="playAudio('emergency')">
+                    <div class="button-header">
+                        <span class="button-icon">🔴</span>
+                        <div>
+                            <div class="button-title">Plan de Urgență - Muncă Solitară</div>
+                            <div class="button-subtitle">Apasă aici pentru instrucțiuni audio</div>
+                        </div>
+                    </div>
+                    <span class="coming-soon">Curând disponibil</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Documents Section -->
+        <div class="section">
+            <div class="section-header">
+                <span class="section-icon">📄</span>
+                <h2>Documente Scrise</h2>
+            </div>
+            <div class="grid">
+                <a href="bm_cleaning_dilution_guide_ro.html" class="resource-button" target="_blank">
+                    <div class="button-header">
+                        <span class="button-icon">🔵</span>
+                        <div>
+                            <div class="button-title">Ghid de Diluare Produse</div>
+                            <div class="button-subtitle">Apasă aici pentru instrucțiuni pas cu pas</div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="bm_shower_cleaning_sop_ro.html" class="resource-button" target="_blank">
+                    <div class="button-header">
+                        <span class="button-icon">🚿</span>
+                        <div>
+                            <div class="button-title">Curățare Duș - SOP</div>
+                            <div class="button-subtitle">Apasă aici pentru instrucțiuni pas cu pas</div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="bm_kitchen_cleaning_sop_ro.html" class="resource-button" target="_blank">
+                    <div class="button-header">
+                        <span class="button-icon">🍽️</span>
+                        <div>
+                            <div class="button-title">Curățare Bucătărie - SOP</div>
+                            <div class="button-subtitle">Apasă aici pentru instrucțiuni pas cu pas</div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="bm_dusting_sop_ro.html" class="resource-button" target="_blank">
+                    <div class="button-header">
+                        <span class="button-icon">✨</span>
+                        <div>
+                            <div class="button-title">Ștergere Praf - SOP</div>
+                            <div class="button-subtitle">Apasă aici pentru instrucțiuni pas cu pas</div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="bm_cloth_washing_instructions_ro.html" class="resource-button" target="_blank">
+                    <div class="button-header">
+                        <span class="button-icon">🧺</span>
+                        <div>
+                            <div class="button-title">Spălare Cârpe & Mopuri</div>
+                            <div class="button-subtitle">Apasă aici pentru instrucțiuni pas cu pas</div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="bm_emergency_solo_work_plan_ro.html" class="resource-button" target="_blank">
+                    <div class="button-header">
+                        <span class="button-icon">🔴</span>
+                        <div>
+                            <div class="button-title">Plan de Urgență - Muncă Solitară</div>
+                            <div class="button-subtitle">Apasă aici pentru instrucțiuni pas cu pas</div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="bm_toilet_cleaning_sop_ro.html" class="resource-button" target="_blank">
+                    <div class="button-header">
+                        <span class="button-icon">🚽</span>
+                        <div>
+                            <div class="button-title">Curățare Toalete - SOP</div>
+                            <div class="button-subtitle">Apasă aici pentru instrucțiuni pas cu pas</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>Întrebări despre instruire?</p>
+            <p>Întreabă-o pe <strong>Maria</strong> sau pe <strong>supervizorul tău</strong></p>
+            <div class="footer-icon">💚</div>
+        </div>
+    </div>
+
+    <script>
+        // Audio player function - ADD YOUR GOOGLE DRIVE MP3 LINKS HERE
+        function playAudio(type) {
+            const audioLinks = {
+                'dilution': '', // Add Google Drive MP3 link here
+                'shower': '',   // Add Google Drive MP3 link here
+                'kitchen': '',  // Add Google Drive MP3 link here
+                'dusting': '',  // Add Google Drive MP3 link here
+                'toilet': '',   // Add Google Drive MP3 link here
+                'washing': '',  // Add Google Drive MP3 link here
+                'emergency': '' // Add Google Drive MP3 link here
+            };
+            
+            if (audioLinks[type] && audioLinks[type] !== '') {
+                window.open(audioLinks[type], '_blank');
+            } else {
+                alert('Acest audio va fi disponibil curând! 🎧');
+            }
+        }
+    </script>
+</body>
+</html>
